@@ -1,13 +1,9 @@
 static char* asciiart = "\n"                                                                                                                                                                                  
-"                       ,,                                                                    /n" 
-"  .g8"""bgd          `7MM                               `7MM"""Mq.   .g8"""bgd `7MMF'   7MMF /n"
-".dP'     `M            MM                                 MM   `MM..dP'     `M   MM      MM  /n" 
-"dM'       `  ,6"Yb.    MM   ,6"Yb.  `7M'   `MF'`7M'   `MF'MM   ,M9 dM'       `   MM      MM  /n"
-"MM          8)   MM    MM  8)   MM    `VA ,V'    VA   ,V  MMmmdM9  MM            MMmmmmmmMM  /n"
-"MM.    `7MMF',pm9MM    MM   ,pm9MM      XMX       VA ,V   MM  YM.  MM.    `7MMF' MM      MM  /n"
-"`Mb.     MM 8M   MM    MM  8M   MM    ,V' VA.      VVV    MM   `Mb.`Mb.     MM   MM      MM  /n"
-"   bmmmdPY `Moo9^Yo..JMML.'Moo9^Yo..AM.   .MA.    ,V    .JMML. .JMM.   bmmmdPY .JMML.   JMML /n"
-"                                                 ,V                                          /n"
-"                                               OOb                                           /n/n"
+"_________      ______                     ______________________  __ /n"
+"__  ____/_____ ___  /_____ ____  ______  ____  __ \_  ____/__  / / / /n"
+"_  / __ _  __ `/_  /_  __ `/_  |/_/_  / / /_  /_/ /  / __ __  /_/ /  /n" 
+"/ /_/ / / /_/ /_  / / /_/ /__>  < _  /_/ /_  _, _// /_/ / _  __  /   /n"
+"\____/  \__,_/ /_/  \__,_/ /_/|_| _\__, / /_/ |_| \____/  /_/ /_/    /n"
+"                                 /____/                              /n/n"
 static char* asciitail =
-	"              GalaxyRgh XeLL RELOADED- Xenon Linux Loader by SquidWid and SubZero on discord\n\n";
+	"              GalaxyRgh XeLL RELOADED- Xenon Linux Loader by SquidWid and SubZero on discord https://discord.gg/fu7s3pbKwf\n\n";
