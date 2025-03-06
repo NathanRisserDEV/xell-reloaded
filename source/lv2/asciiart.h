@@ -10,4 +10,4 @@ static char* asciiart = "\n"
 "      ░       ░  ░    ░  ░     ░  ░ ░    ░   ░ ░        ░           ░  ░  ░  ░\n"
 "                                             ░ ░                              \n\n";                                   
 static char* asciitail =
-	"              GalaxyRgh XeLL RELOADED- Xenon Linux Loader\n\n";
+	"              GalaxyRgh XeLL RELOADED- Xenon Linux Loader by SquidWid and SubZero on discord\n\n";
