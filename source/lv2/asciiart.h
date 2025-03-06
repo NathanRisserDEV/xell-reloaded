@@ -7,6 +7,6 @@ static char* asciiart = "\n"
 "    \ \____/\ \__/.\_\/\____\ \__/.\_\/\_/\_\\/`____ \\ \_\ \_\ \____/\ \_\ \_\\n"
 "     \/___/  \/__/\/_/\/____/\/__/\/_/\//\/_/ `/___/> \\/_/\/ /\/___/  \/_/\/_/\n"
 "                                                /\___/\n"
-"                                               \/__/\n\n"
+"                                               \/__/\n\n";
 static char* asciitail =
 	"              GalaxyRgh XeLL RELOADED- Xenon Linux Loader by SquidWid and SubZero on discord https://discord.gg/fu7s3pbKwf\n\n";
