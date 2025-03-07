@@ -116,13 +116,13 @@ int main(){
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_PINK); // Pink text on black bg
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_RED); // Red text on black bg
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_BLUE); // Blue text on black bg
 #else
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_GREEN); // Green text on black bg
 #endif
     console_init();
 
-    printf("\nXeLL RELOADED - Xenon Linux Loader 2nd Stage " LONGVERSION "\n");
+    printf("\nXeLL RELOADED LONGHORN - Xenon Linux Loader 2nd Stage " LONGVERSION "\n");
     //printf("\nBuilt with GCC " GCC_VERSION " and Binutils " BINUTILS_VERSION " \n"); // User doesn't need to know this
     do_asciiart();
 
@@ -171,10 +171,10 @@ int main(){
     /*int device_list_size = */ findDevices();
 
     console_clrscr();
-    printf(" ______________________________________\n|                                      |\n|  XeLL RELOADED - Xenon Linux Loader  |\n|______________________________________|\n"); // Fancy
+    printf(" _________________________________________________\n|                                                 |\n|  XeLL RELOADED - Xenon Linux Loader             |\n|  Longhorn build by squidwidthe1st on Discord    |\n|_________________________________________________|\n"); // Fancy
     
 #ifndef NO_PRINT_CONFIG
-    printf("\n * FUSES - write them down and keep them safe:\n");
+    printf("\n * FUSES to this system - write them down and keep them safe:\n");
     char *fusestr = FUSES;
     char *cbldvstr = CBLDV;
     char *fgldvstr = FGLDV;
@@ -219,23 +219,23 @@ int main(){
     printf(" * CPU PVR: %08x\n", mfspr(287));
     
     if (xenon_get_console_type() == 0) {
-	    printf(" * Console: Xenon\n");
+	    printf(" * Console: Xenon System\n");
     } else if (xenon_get_console_type() == 1) {
-	    printf(" * Console: Xenon/Zephyr\n");
+	    printf(" * Console: Xenon/Zephyr System\n");
     } else if (xenon_get_console_type() == 2) {
-	    printf(" * Console: Falcon\n");
+	    printf(" * Console: Falcon System\n");
     } else if (xenon_get_console_type() == 3) {
-	    printf(" * Console: Jasper\n");
+	    printf(" * Console: Jasper System\n");
     } else if (xenon_get_console_type() == 4) {
-	    printf(" * Console: Trinity\n");
+	    printf(" * Console: Trinity System\n");
     } else if (xenon_get_console_type() == 5) {
-	    printf(" * Console: Corona\n");
+	    printf(" * Console: Corona System\n");
     } else if (xenon_get_console_type() == 6) {
-	    printf(" * Console: Corona MMC\n");
+	    printf(" * Console: Corona MMC System\n");
     } else if (xenon_get_console_type() == 7) {
-	    printf(" * Console: Winchester - how did you get here???\n");
+	    printf(" * Console: Winchester - how did you get here??? really how?\n");
     } else if (xenon_get_console_type() == -1) {
-	    printf(" * Console: Unknown\n");
+	    printf(" * Console: Unknown ERROR\n");
     }
     
     printf(" * 2BL LDV: %d\n", cbldvcount);
