@@ -116,13 +116,13 @@ int main(){
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_PINK); // Pink text on black bg
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_BLUE); // Blue text on black bg
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_RED); // Red text on black bg
 #else
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_GREEN); // Green text on black bg
 #endif
     console_init();
 
-    printf("\nXeLL RELOADED LONGHORN - Xenon Linux Loader 2nd Stage " LONGVERSION "\n");
+    printf("\nXeLL RELOADED GALAXYRGH - Xenon Linux Loader 2nd Stage " LONGVERSION "\n");
     //printf("\nBuilt with GCC " GCC_VERSION " and Binutils " BINUTILS_VERSION " \n"); // User doesn't need to know this
     do_asciiart();
 
@@ -171,7 +171,7 @@ int main(){
     /*int device_list_size = */ findDevices();
 
     console_clrscr();
-    printf(" _________________________________________________\n|                                                 |\n|  XeLL RELOADED - Xenon Linux Loader             |\n|  Longhorn build by squidwidthe1st on Discord    |\n|_________________________________________________|\n"); // Fancy
+    printf(" _________________________________________________\n|                                                 |\n|  XeLL RELOADED - Xenon Linux Loader             |\n|  GalaxyRGH build by squidwidthe1st on Discord   |\n|_________________________________________________|\n"); // Fancy
     
 #ifndef NO_PRINT_CONFIG
     printf("\n * FUSES to this system - write them down and keep them safe:\n");
