@@ -228,6 +228,9 @@ int main(){
 	    printf(" * Console: Jasper System\n");
     } else if (xenon_get_console_type() == 4) {
 	    printf(" * Console: Trinity System\n");
+	    printf(" * Glitch Method: Project Mufas/MUFFIN\n");
+	    printf(" * Glitch Chip: Matrix Glitcher\n");
+	    printf(" * Mod Date: 8/2/2025\n");
     } else if (xenon_get_console_type() == 5) {
 	    printf(" * Console: Corona System\n");
     } else if (xenon_get_console_type() == 6) {
@@ -269,4 +272,5 @@ int main(){
 
     return 0;
 }
+
 
