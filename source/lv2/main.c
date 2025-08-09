@@ -224,14 +224,14 @@ int main(){
 	    printf(" * Console: Xenon/Zephyr System\n");
     } else if (xenon_get_console_type() == 2) {
 	    printf(" * Console: Falcon System\n");
+		printf(" * Glitch Method: RGH-1.2\n");
+	    printf(" * Glitch Chip: Matrix Glitcher\n");
+	    printf(" * Modder: squidwidthe1st on discord\n");
+	    printf(" * Mod Date: 8/9/2025\n");
     } else if (xenon_get_console_type() == 3) {
 	    printf(" * Console: Jasper System\n");
     } else if (xenon_get_console_type() == 4) {
 	    printf(" * Console: Trinity System\n");
-	    printf(" * Glitch Method: RGH-3\n");
-	    printf(" * Glitch Chip: Chipless\n");
-	    printf(" * Modder: squidwidthe1st on discord\n");
-	    printf(" * Mod Date: 8/4/2025\n");
     } else if (xenon_get_console_type() == 5) {
 	    printf(" * Console: Corona System\n");
     } else if (xenon_get_console_type() == 6) {
@@ -273,6 +273,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
