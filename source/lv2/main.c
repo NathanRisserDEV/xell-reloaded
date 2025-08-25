@@ -227,7 +227,8 @@ int main(){
 		printf(" * Glitch Method: RGH-1.2\n");
 	    printf(" * Glitch Chip: Matrix Glitcher\n");
 	    printf(" * Modder: squidwidthe1st on discord\n");
-	    printf(" * Mod Date: 8/9/2025\n");
+	    printf(" * Mod Date: 8/25/2025\n");
+		printf(" * CAPACITORS CHANGED");
     } else if (xenon_get_console_type() == 3) {
 	    printf(" * Console: Jasper System\n");
     } else if (xenon_get_console_type() == 4) {
@@ -273,6 +274,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
