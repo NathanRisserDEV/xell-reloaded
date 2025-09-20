@@ -35,6 +35,44 @@
 
 #include "log.h"
 
+// ---------------------- animation code ----------------------
+void animate_signature_step() {
+    static const char *msg = "Made by squidwidthe1st on Discord";
+    static int len = 0;
+    static int pos = 0;
+    static int direction = 1; // 1 = typing forward, -1 = deleting
+    static int tick = 0;
+
+    if (len == 0) len = strlen(msg);
+
+    // control animation speed (adjust ticks if too fast/slow)
+    if (++tick < 3) return;
+    tick = 0;
+
+    // fixed row for animation
+    int row = 25;
+    int col = 0;
+
+    // clear line before writing
+    console_set_cursor(row, col);
+    printf("%-*s", len, "");
+
+    // print substring
+    console_set_cursor(row, col);
+    printf("%.*s", pos, msg);
+
+    // update typing position
+    pos += direction;
+    if (pos > len) {
+        direction = -1;
+        pos = len;
+    } else if (pos < 0) {
+        direction = 1;
+        pos = 0;
+    }
+}
+// ------------------------------------------------------------
+
 void do_asciiart() {
     char *p = asciiart;
     while (*p)
@@ -61,51 +99,6 @@ int cbldvcount;
 int fgldvcount;
 
 unsigned char stacks[6][0x10000];
-
-/* animation stack for thread */
-static unsigned char anim_stack[0x10000];
-
-/* crude millisecond-ish delay */
-static void delay_ms(unsigned int ms)
-{
-    volatile unsigned int i, j;
-    for (j = 0; j < ms; ++j) {
-        for (i = 0; i < 20000; ++i) {
-            __asm__ volatile ("" ::: "memory");
-        }
-    }
-}
-
-/* animation thread */
-void animate_madeby_task()
-{
-    const char *s = "made by squidwidthe1st on discord";
-    int len = strlen(s);
-    int i;
-
-    printf("\n"); // reserve a line for animation
-
-    for (;;) {
-        // type out
-        for (i = 1; i <= len; ++i) {
-            printf("\r%.*s", i, s);
-            fflush(stdout);
-            delay_ms(60);
-        }
-
-        delay_ms(600);
-
-        // delete
-        for (i = len; i >= 0; --i) {
-            printf("\r%.*s", i, s);
-            printf("%*s", len - i, " ");
-            fflush(stdout);
-            delay_ms(30);
-        }
-
-        delay_ms(300);
-    }
-}
 
 void reset_timebase_task()
 {
@@ -138,14 +131,17 @@ int main(){
     printf("ANA Dump before Init:\n");
     dumpana();
 
+    // linux needs this
     synchronize_timebases();
     
+    // irqs preinit (SMC related)
     *(volatile uint32_t*)0xea00106c = 0x1000000;
     *(volatile uint32_t*)0xea001064 = 0x10;
     *(volatile uint32_t*)0xea00105c = 0xc000000;
 
     xenon_smc_start_bootanim();
 
+    // flush console after each outputted char
     setbuf(stdout,NULL);
 
     xenos_init(VIDEO_MODE_AUTO);
@@ -154,23 +150,23 @@ int main(){
     dumpana();
 
 #ifdef SWIZZY_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_ORANGE);
+    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_ORANGE); // Orange text on black bg
 #elif defined XTUDO_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_PINK);
+    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_PINK); // Pink text on black bg
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE); // Purple text on black bg
 #else
-    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_GREEN);
+    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_GREEN); // Green text on black bg
 #endif
     console_init();
 
     printf("\nXeLL RELOADED GALAXYRGH - Xenon Linux Loader 2nd Stage " LONGVERSION "\n");
     do_asciiart();
-    
+
     xenon_sound_init();
     xenon_make_it_faster(XENON_SPEED_FULL);
 
-    if (xenon_get_console_type() != REV_CORONA_PHISON)
+    if (xenon_get_console_type() != REV_CORONA_PHISON) //Not needed for MMC type of consoles! ;)
     {
         printf(" * nand init\n");
         sfcx_init();
@@ -187,6 +183,7 @@ int main(){
 #ifndef NO_NETWORKING
     printf(" * network init\n");
     network_init();
+
     printf(" * starting httpd server...");
     httpd_start();
     printf("success\n");
@@ -205,10 +202,10 @@ int main(){
 #endif
 
     mount_all_devices();
-    /*int device_list_size = */ findDevices();
+    findDevices();
 
     console_clrscr();
-    printf(" _________________________________________________\n|                                                 |\n|  XeLL RELOADED - Xenon Linux Loader             |\n|  GalaxyRGH build by squidwidthe1st on Discord   |\n|_________________________________________________|\n"); 
+    printf(" _________________________________________________\n|                                                 |\n|  XeLL RELOADED - Xenon Linux Loader             |\n|  GalaxyRGH build by squidwidthe1st on Discord   |\n|_________________________________________________|\n"); // Fancy
     
 #ifndef NO_PRINT_CONFIG
     printf("\n * FUSES to this system - write them down and keep them safe:\n");
@@ -265,10 +262,7 @@ int main(){
         printf(" * Console: Trinity System\n");
         printf(" * Glitch Method: RGH-3\n");
         printf(" * Glitch Chip: NONE-Chipless | 10k Resistor\n");
-
-        // start animated thread instead of static modder line
-        xenon_run_thread_task(5, &anim_stack[0xff00], (void *)animate_madeby_task);
-
+        printf(" * Modder: squidwidthe1st on discord\n");
         printf(" * Mod Date: 9/20/2025\n");
     } else if (xenon_get_console_type() == 5) {
         printf(" * Console: Corona System\n");
@@ -289,12 +283,17 @@ int main(){
     
     mount_all_devices();
     printf("\n * Looking for files on local media and TFTP...\n\n");
+
+    // ------------ main loop ------------
     for(;;){
         fileloop();
         tftp_loop();
-        console_clrline();
         usb_do_poll();
+
+        // animate on bottom line
+        animate_signature_step();
     }
+    // ----------------------------------
 
     return 0;
 }
