@@ -116,7 +116,7 @@ int main(){
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_PINK); // Pink text on black bg
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE); // Red text on black bg
+    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_ORANGE); // Red text on black bg
 #else
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_GREEN); // Green text on black bg
 #endif
@@ -228,10 +228,6 @@ int main(){
 	    printf(" * Console: Jasper System\n");
     } else if (xenon_get_console_type() == 4) {
 	    printf(" * Console: Trinity System\n");
-		printf(" * Glitch Method: RGH-3\n");
-	    printf(" * Glitch Chip: NONE-Chipless | 10k Resistor\n");
-	    printf(" * Modder: squidwidthe1st on discord\n");
-	    printf(" * Mod Date: 9/20/2025\n");
     } else if (xenon_get_console_type() == 5) {
 	    printf(" * Console: Corona System\n");
     } else if (xenon_get_console_type() == 6) {
@@ -273,6 +269,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
