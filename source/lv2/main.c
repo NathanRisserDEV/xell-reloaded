@@ -229,7 +229,11 @@ int main(){
     } else if (xenon_get_console_type() == 4) {
 	    printf(" * Console: Trinity System\n");
     } else if (xenon_get_console_type() == 5) {
-	    printf(" * Console: Corona System\n");
+	    printf(" * Console: Stingray System\n");
+		printf(" * Mod: RGH-3 W Postfix\n");
+		printf(" * Mod Date: 10/7/2025 - 6:15PM\n");
+		printf(" * Actual Date: 01/09/2014\n");
+		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 6) {
 	    printf(" * Console: Corona MMC System\n");
     } else if (xenon_get_console_type() == 7) {
@@ -269,6 +273,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
