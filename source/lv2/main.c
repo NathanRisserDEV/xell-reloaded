@@ -112,11 +112,11 @@ int main(){
     dumpana();
 
 #ifdef SWIZZY_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_ORANGE); // Orange text on black bg
+    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_RED); // Red text on black bg
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_PINK); // Pink text on black bg
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_ORANGE); // Red text on black bg
+    console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_RED); // Red text on black bg
 #else
     console_set_colors(CONSOLE_COLOR_BLACK,CONSOLE_COLOR_GREEN); // Green text on black bg
 #endif
@@ -229,13 +229,19 @@ int main(){
     } else if (xenon_get_console_type() == 4) {
 	    printf(" * Console: Trinity System\n");
     } else if (xenon_get_console_type() == 5) {
-	    printf(" * Console: Stingray System\n");
-		printf(" * Mod: RGH-3 W Postfix\n");
-		printf(" * Mod Date: 10/7/2025 - 6:15PM\n");
-		printf(" * Actual Date: 01/09/2014\n");
+	    printf(" * Console: Corona System\n");
+		printf(" * Mod: RGH-3\n");
+		printf(" * Mod Date: 1/10/2026 - 3:05PM\n");
+		printf(" * Actual Motherboard Date: 05/14/2012\n");
+		printf(" * Date on sticker: 2012-05-14\n");
 		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 6) {
 	    printf(" * Console: Corona MMC System\n");
+		printf(" * Mod: RGH-3\n");
+		printf(" * Mod Date: 1/10/2026 - 3:05PM\n");
+		printf(" * Actual Motherboard Date: 05/14/2012\n");
+		printf(" * Date on sticker: 2012-05-14\n");
+		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 7) {
 	    printf(" * Console: Winchester - how did you get here??? really how?\n");
     } else if (xenon_get_console_type() == -1) {
@@ -273,6 +279,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
