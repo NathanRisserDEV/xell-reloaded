@@ -220,8 +220,18 @@ int main(){
     
     if (xenon_get_console_type() == 0) {
 	    printf(" * Console: Xenon System\n");
+		printf(" * Mod: EXT_CLK - Matrix Glitcher V3\n");
+		printf(" * Mod Date: 1/28/2026 - 8:48PM\n");
+		printf(" * Actual Motherboard Date: 07/20/2006\n");
+		printf(" * Date on sticker: 2006-07-21\n");
+		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 1) {
 	    printf(" * Console: Xenon/Zephyr System\n");
+		printf(" * Mod: EXT_CLK - Matrix Glitcher V3\n");
+		printf(" * Mod Date: 1/28/2026 - 8:48PM\n");
+		printf(" * Actual Motherboard Date: 07/20/2006\n");
+		printf(" * Date on sticker: 2006-07-21\n");
+		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 2) {
 	    printf(" * Console: Falcon System\n");
     } else if (xenon_get_console_type() == 3) {
@@ -230,11 +240,6 @@ int main(){
 	    printf(" * Console: Trinity System\n");
     } else if (xenon_get_console_type() == 5) {
 	    printf(" * Console: Corona Stingray System\n");
-		printf(" * Mod: Project Mufas - Matrix Glitcher\n");
-		printf(" * Mod Date: 1/10/2026 - 8:48PM\n");
-		printf(" * Actual Motherboard Date: 08/12/2013\n");
-		printf(" * Date on sticker: 2013-08-13\n");
-		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 6) {
 	    printf(" * Console: Corona MMC System\n");
     } else if (xenon_get_console_type() == 7) {
@@ -274,6 +279,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
