@@ -219,18 +219,13 @@ int main(){
     printf(" * CPU PVR: %08x\n", mfspr(287));
     
     if (xenon_get_console_type() == 0) {
-	    printf(" * Console: Xenon System\n");
-		printf(" * Mod: EXT_CLK - Matrix Glitcher V3\n");
-		printf(" * Mod Date: 1/28/2026 - 8:48PM\n");
-		printf(" * Actual Motherboard Date: 07/20/2006\n");
-		printf(" * Date on sticker: 2006-07-21\n");
-		printf(" * Modder: squidwidthe1st on discord\n");
+		printf(" * Console: Xenon System\n");
     } else if (xenon_get_console_type() == 1) {
-	    printf(" * Console: Xenon/Zephyr System\n");
+	    printf(" * Console: Elpis System\n");
 		printf(" * Mod: EXT_CLK - Matrix Glitcher V3\n");
-		printf(" * Mod Date: 1/28/2026 - 8:48PM\n");
-		printf(" * Actual Motherboard Date: 07/20/2006\n");
-		printf(" * Date on sticker: 2006-07-21\n");
+		printf(" * Mod Date: 2/24/2026 - 10:01PM\n");
+		printf(" * Actual Motherboard Date: 08/30/2006\n");
+		printf(" * Date on sticker: Service Date: 2010-05-17\n");
 		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 2) {
 	    printf(" * Console: Falcon System\n");
@@ -279,6 +274,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
