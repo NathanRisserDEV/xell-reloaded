@@ -265,30 +265,17 @@ int main(){
     //}
     
     mount_all_devices();
-    printf("\n * Looking for files on local media and TFTP...\n\n");
+    printf("\n * Looking for files on local media and TFTP...\n\n");
+    for(;;){
+	    fileloop();
+	    tftp_loop(); //less likely to find something...
+	    console_clrline();
+	    usb_do_poll(); // Refresh USB
+    }
 
-    // Declare the controller data structure
-    struct controller_data_s ctrl;
-
-    for(;;){
-        fileloop();
-        tftp_loop(); //less likely to find something...
-        console_clrline();
-        usb_do_poll(); // Refresh USB
-
-        // Check for controller input on Player 1 (port 0)
-        if (get_controller_data(&ctrl, 0)) {
-            // Check if the Back button is currently being pressed
-            if (ctrl.back) {
-                printf("\n\n * Back button pressed. Rebooting console...\n");
-                delay(1); // Brief pause so the user can see the message
-                xenon_smc_power_reboot(); 
-            }
-        }
-    }
-
-    return 0;
+    return 0;
 }
+
 
 
 
