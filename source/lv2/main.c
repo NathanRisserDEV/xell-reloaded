@@ -221,16 +221,17 @@ int main(){
     if (xenon_get_console_type() == 0) {
 		printf(" * Console: Xenon System\n");
     } else if (xenon_get_console_type() == 1) {
-	    printf(" * Console: Elpis System\n");
-		printf(" * Mod: EXT_CLK - Matrix Glitcher V3\n");
-		printf(" * Mod Date: 2/24/2026 - 10:01PM\n");
-		printf(" * Actual Motherboard Date: 08/30/2006\n");
-		printf(" * Date on sticker: Service Date: 2010-05-17\n");
-		printf(" * Modder: squidwidthe1st on discord\n");
+	    printf(" * Console: Zephyr System\n");
     } else if (xenon_get_console_type() == 2) {
 	    printf(" * Console: Falcon System\n");
     } else if (xenon_get_console_type() == 3) {
 	    printf(" * Console: Jasper System\n");
+		printf(" * Mod: RGH-1.2 SMC+ - Monolithic Capacitor\n");
+		printf(" * Glitcher: Matrix Glitcher V3\n");
+		printf(" * Mod Date: 3/12/2026 - 8:14PM\n");
+		printf(" * Actual Motherboard Date: 03/08/2020 - Mistype?\n");
+		printf(" * Date on sticker: Service Date: 2010-03-06\n");
+		printf(" * Modder: squidwidthe1st on discord\n");
     } else if (xenon_get_console_type() == 4) {
 	    printf(" * Console: Trinity System\n");
     } else if (xenon_get_console_type() == 5) {
@@ -274,6 +275,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
