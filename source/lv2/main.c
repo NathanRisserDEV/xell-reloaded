@@ -305,16 +305,16 @@ int main() {
 
         printf(" * Console: Jasper System\n");
 
-        printf(" * Mod: RGH-1.2 SMC+ - Monolithic Capacitor\n");
-        printf(" * Glitcher: Matrix Glitcher V3\n");
-        printf(" * Mod Date: 3/12/2026 - 8:14PM\n");
-        printf(" * Actual Motherboard Date: 03/08/2020 - Mistype?\n");
-        printf(" * Date on sticker: Service Date: 2010-03-06\n");
-        printf(" * Modder: squidwidthe1st on discord\n");
-
     } else if (xenon_get_console_type() == 4) {
 
         printf(" * Console: Trinity System\n");
+        printf(" * Mod: Project Mufas - SMC+");
+        printf(" * Glitcher: Matrix Glitcher V3 Oscillator Disabled\n");
+        printf(" * Mod Date: 4/14/2026 - 7:27PM\n");
+        printf(" * Actual Motherboard Date: 08/21/2020 - Mistype?\n");
+        printf(" * Date on sticker: Service Date: 2010-08-19\n");
+        printf(" * Modder: squidwidthe1st on discord\n");
+        printf(" * WARNING: This system had RRoD 0020 - Reflowed!!!\n");
 
     } else if (xenon_get_console_type() == 5) {
 
