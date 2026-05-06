@@ -308,13 +308,12 @@ int main() {
     } else if (xenon_get_console_type() == 4) {
 
         printf(" * Console: Trinity System\n");
-        printf(" * Mod: Project Mufas - SMC+");
-        printf(" * Glitcher: Matrix Glitcher V3 Oscillator Disabled\n");
-        printf(" * Mod Date: 4/14/2026 - 7:27PM\n");
-        printf(" * Actual Motherboard Date: 08/21/2020 - Mistype?\n");
-        printf(" * Date on sticker: Service Date: 2010-08-19\n");
+        printf(" * Mod: RGH-3");
+        printf(" * Glitcher: SMC\n");
+        printf(" * Mod Date: 5/6/2026 - 5:54PM\n");
+        printf(" * Actual Motherboard Date: 10/31/2010\n");
+        printf(" * Date on sticker: Service Date: 2010-10-31\n");
         printf(" * Modder: squidwidthe1st on discord\n");
-        printf(" * WARNING: This system had RRoD 0020 - Reflowed!!!\n");
 
     } else if (xenon_get_console_type() == 5) {
 
