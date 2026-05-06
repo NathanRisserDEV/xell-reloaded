@@ -308,11 +308,11 @@ int main() {
     } else if (xenon_get_console_type() == 4) {
 
         printf(" * Console: Trinity System\n");
-        printf(" * Mod: RGH-3");
+        printf(" * Mod: RGH-3\n");
         printf(" * Glitcher: SMC\n");
         printf(" * Mod Date: 5/6/2026 - 5:54PM\n");
         printf(" * Actual Motherboard Date: 10/31/2010\n");
-        printf(" * Date on sticker: Service Date: 2010-10-31\n");
+        printf(" * Date on sticker: 2010-10-31\n");
         printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 5) {
@@ -340,4 +340,25 @@ int main() {
     network_print_config();
 
 #endif
+
+    /*
+     * This is the important missing part.
+     * Without this loop, main() reaches the end, returns 0,
+     * and XeLL says "[Exit] with code 0" then reloads.
+     */
+
+    LogDeInit();
+
+    mount_all_devices();
+
+    printf("\n * Looking for files on local media and TFTP...\n\n");
+
+    for (;;) {
+        fileloop();
+        tftp_loop();
+        console_clrline();
+        usb_do_poll();
+    }
+
+    return 0;
 }
