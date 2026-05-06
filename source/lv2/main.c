@@ -138,7 +138,7 @@ int main() {
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PINK);
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_RED);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #else
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #endif
