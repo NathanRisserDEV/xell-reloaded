@@ -292,10 +292,22 @@ int main() {
     if (xenon_get_console_type() == 0) {
 
         printf(" * Console: Xenon System\n");
+        printf(" * Mod: JTaG - True Dash Version: 4552 Blades\n");
+        printf(" * Glitcher: System\n");
+        printf(" * Mod Date: 5/15/2026 - 5:10PM\n");
+        printf(" * Actual Motherboard Date: 07/01/2006\n");
+        printf(" * Date on sticker: 2006-07-02\n");
+        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 1) {
 
         printf(" * Console: Zephyr System\n");
+        printf(" * Mod: JTaG - True Dash Version: 4552 Blades\n");
+        printf(" * Glitcher: System\n");
+        printf(" * Mod Date: 5/15/2026 - 5:10PM\n");
+        printf(" * Actual Motherboard Date: 07/01/2006\n");
+        printf(" * Date on sticker: 2006-07-02\n");
+        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 2) {
 
@@ -308,12 +320,6 @@ int main() {
     } else if (xenon_get_console_type() == 4) {
 
         printf(" * Console: Trinity System\n");
-        printf(" * Mod: RGH-3\n");
-        printf(" * Glitcher: SMC\n");
-        printf(" * Mod Date: 5/6/2026 - 5:54PM\n");
-        printf(" * Actual Motherboard Date: 10/31/2010\n");
-        printf(" * Date on sticker: 2010-10-31\n");
-        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 5) {
 
