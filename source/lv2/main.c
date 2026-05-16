@@ -301,7 +301,7 @@ int main() {
 
     } else if (xenon_get_console_type() == 1) {
 
-        printf(" * Console: Zephyr System\n");
+        printf(" * Console: Xenon System\n");
         printf(" * Mod: JTaG - True Dash Version: 4552 Blades\n");
         printf(" * Glitcher: System\n");
         printf(" * Mod Date: 5/15/2026 - 5:10PM\n");
