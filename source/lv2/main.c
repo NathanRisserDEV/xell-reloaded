@@ -324,10 +324,24 @@ int main() {
     } else if (xenon_get_console_type() == 5) {
 
         printf(" * Console: Corona Stingray System\n");
+        printf(" * Mod: RGH-3\n");
+        printf(" * Glitcher: System\n");
+        printf(" * Extra Component: Postfix Adapter\n");
+        printf(" * Mod Date: 5/25/2026 - 2:33PM\n");
+        printf(" * Actual Motherboard Date: 01/09/2014\n");
+        printf(" * Date on sticker: 2013-10-16\n");
+        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 6) {
 
-        printf(" * Console: Corona MMC System\n");
+        printf(" * Console: Corona MMC Stingray System\n");
+        printf(" * Mod: RGH-3\n");
+        printf(" * Glitcher: System\n");
+        printf(" * Extra Component: Postfix Adapter\n");
+        printf(" * Mod Date: 5/25/2026 - 2:33PM\n");
+        printf(" * Actual Motherboard Date: 01/09/2014\n");
+        printf(" * Date on sticker: 2013-10-16\n");
+        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 7) {
 
