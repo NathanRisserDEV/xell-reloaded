@@ -24,7 +24,7 @@ static void splash_pset(int x, int y, unsigned char r, unsigned char g, unsigned
     uint32_t color = (b << 24) + (g << 16) + (r << 8);
     int base = (((y >> 5) * 32 * console_width + ((x >> 5) << 10)
         + (x & 3) + ((y & 1) << 2) + (((x & 31) >> 2) << 3)
-        + (((y & 31) >> 1) << 6)) ^ ((y & 8) << 2);
+        + (((y & 31) >> 1) << 6)) ^ ((y & 8) << 2));
 
     fb[base] = color;
 }
