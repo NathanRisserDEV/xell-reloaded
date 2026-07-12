@@ -33,7 +33,7 @@ extern err_t enet_init(struct netif *netif);
 
 void network_poll();
 
-int network_init()
+void network_init()
 {
     uint64_t dhcp_start_time;
     int dots = 0;
@@ -56,7 +56,7 @@ int network_init()
     printf(" * initializing NIC\n");
     if (!netif_add(&netif, &ipaddr, &netmask, &gateway, NULL, enet_init, ip_input)) {
         printf(" ! netif_add failed!\n");
-        return NETWORK_INIT_FAILURE;
+        return;
     }
     netif_set_default(&netif);
 
@@ -88,10 +88,9 @@ int network_init()
         IP4_ADDR(&netmask, 255, 255, 255, 0);
         netif_set_addr(&netif, &ipaddr, &netmask, &gateway);
         netif_set_up(&netif);
-        return NETWORK_INIT_DHCP_FAILURE;
+        return;
     }
 
-    return NETWORK_INIT_SUCCESS;
 }
 
 void network_poll()
