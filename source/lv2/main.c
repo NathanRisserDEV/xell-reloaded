@@ -33,6 +33,8 @@
 #include "file.h"
 #include "tftp/tftp.h"
 #include "log.h"
+#include "splash.h"
+#include "functions_menu.h"
 
 
 void do_asciiart() {
@@ -138,12 +140,13 @@ int main() {
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PINK);
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE);
 #else
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #endif
 
     console_init();
+    galaxy_splash_show(5);
 
 
     printf(
@@ -301,13 +304,7 @@ int main() {
 
     } else if (xenon_get_console_type() == 1) {
 
-        printf(" * Console: Xenon System\n");
-        printf(" * Mod: JTaG - True Dash Version: 4552 Blades\n");
-        printf(" * Glitcher: System\n");
-        printf(" * Mod Date: 5/15/2026 - 5:10PM\n");
-        printf(" * Actual Motherboard Date: 07/01/2006\n");
-        printf(" * Date on sticker: 2006-07-02\n");
-        printf(" * Modder: squidwidthe1st on discord\n");
+        printf(" * Console: Xenon/Zephyr System\n");
 
     } else if (xenon_get_console_type() == 2) {
 
@@ -323,25 +320,11 @@ int main() {
 
     } else if (xenon_get_console_type() == 5) {
 
-        printf(" * Console: Corona Stingray System\n");
-        printf(" * Mod: RGH-3\n");
-        printf(" * Glitcher: System\n");
-        printf(" * Extra Component: Postfix Adapter\n");
-        printf(" * Mod Date: 5/25/2026 - 2:33PM\n");
-        printf(" * Actual Motherboard Date: 01/09/2014\n");
-        printf(" * Date on sticker: 2013-10-16\n");
-        printf(" * Modder: squidwidthe1st on discord\n");
+        printf(" * Console: Corona System\n");
 
     } else if (xenon_get_console_type() == 6) {
 
-        printf(" * Console: Corona MMC Stingray System\n");
-        printf(" * Mod: RGH-3\n");
-        printf(" * Glitcher: System\n");
-        printf(" * Extra Component: Postfix Adapter\n");
-        printf(" * Mod Date: 5/25/2026 - 2:33PM\n");
-        printf(" * Actual Motherboard Date: 01/09/2014\n");
-        printf(" * Date on sticker: 2013-10-16\n");
-        printf(" * Modder: squidwidthe1st on discord\n");
+        printf(" * Console: Corona MMC System\n");
 
     } else if (xenon_get_console_type() == 7) {
 
@@ -378,6 +361,7 @@ int main() {
         tftp_loop();
         console_clrline();
         usb_do_poll();
+        xell_functions_poll();
     }
 
     return 0;
