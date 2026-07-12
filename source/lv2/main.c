@@ -140,7 +140,7 @@ int main() {
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PINK);
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE);
 #else
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #endif
@@ -150,7 +150,7 @@ int main() {
 
 
     printf(
-        "\nXeLL RELOADED GALAXYRGH - Xenon Linux Loader 2nd Stage "
+        "\nXeLL ADVANCED GALAXYRGH - Xenon Linux Loader 2nd Stage "
         LONGVERSION "\n"
     );
 
@@ -223,7 +223,7 @@ int main() {
     printf(
 " _________________________________________________\n"
 "|                                                 |\n"
-"|  XeLL RELOADED - Xenon Linux Loader             |\n"
+"|  XeLL ADVANCED RELOADED - Xenon Linux Loader    |\n"
 "|  GalaxyRGH build by squidwidthe1st on Discord   |\n"
 "|_________________________________________________|\n"
     );
