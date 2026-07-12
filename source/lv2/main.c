@@ -34,6 +34,7 @@
 #include "tftp/tftp.h"
 #include "log.h"
 #include "splash.h"
+#include "functions_menu.h"
 
 
 void do_asciiart() {
@@ -139,7 +140,7 @@ int main() {
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PINK);
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #else
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #endif
@@ -294,10 +295,16 @@ int main() {
     if (xenon_get_console_type() == 0) {
 
         printf(" * Console: Xenon System\n");
+        printf(" * Mod: JTaG - True Dash Version: 4552 Blades\n");
+        printf(" * Glitcher: System\n");
+        printf(" * Mod Date: 5/15/2026 - 5:10PM\n");
+        printf(" * Actual Motherboard Date: 07/01/2006\n");
+        printf(" * Date on sticker: 2006-07-02\n");
+        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 1) {
 
-        printf(" * Console: Xenon/Zephyr System\n");
+        printf(" * Console: Xenon System\n");
 
     } else if (xenon_get_console_type() == 2) {
 
@@ -354,6 +361,7 @@ int main() {
         tftp_loop();
         console_clrline();
         usb_do_poll();
+        xell_functions_poll();
     }
 
     return 0;
