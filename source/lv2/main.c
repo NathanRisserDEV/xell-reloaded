@@ -139,7 +139,7 @@ int main() {
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PINK);
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PURPLE);
 #else
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #endif
@@ -297,7 +297,7 @@ int main() {
 
     } else if (xenon_get_console_type() == 1) {
 
-        printf(" * Console: Xenon System\n");
+        printf(" * Console: Xenon/Zephyr System\n");
 
     } else if (xenon_get_console_type() == 2) {
 
