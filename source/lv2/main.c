@@ -295,12 +295,6 @@ int main() {
     if (xenon_get_console_type() == 0) {
 
         printf(" * Console: Xenon System\n");
-        printf(" * Mod: JTaG - True Dash Version: 4552 Blades\n");
-        printf(" * Glitcher: System\n");
-        printf(" * Mod Date: 5/15/2026 - 5:10PM\n");
-        printf(" * Actual Motherboard Date: 07/01/2006\n");
-        printf(" * Date on sticker: 2006-07-02\n");
-        printf(" * Modder: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 1) {
 
@@ -309,6 +303,12 @@ int main() {
     } else if (xenon_get_console_type() == 2) {
 
         printf(" * Console: Falcon System\n");
+        printf(" * Mod: RGH-1.3 - CHKSTOP\n");
+        printf(" * Glitcher: Matrix Glitcher\n");
+        printf(" * Mod Date: (REFLASHED) 8/28/2026 - 10:31PM\n");
+        printf(" * Actual Motherboard Date: 04/21/2008\n");
+        printf(" * Modders: squidwidthe1st & shrimp_fryrice on discord\n");
+        printf(" * EXTRA MODS: XLume - JQ6500 - PICOFLASHER - WSWITCHPICO\n");
 
     } else if (xenon_get_console_type() == 3) {
 
