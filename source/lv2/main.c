@@ -140,7 +140,7 @@ int main() {
 #elif defined XTUDO_THEME
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_PINK);
 #elif defined DEFAULT_THEME
-    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_RED);
+    console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #else
     console_set_colors(CONSOLE_COLOR_BLACK, CONSOLE_COLOR_GREEN);
 #endif
@@ -303,12 +303,11 @@ int main() {
     } else if (xenon_get_console_type() == 2) {
 
         printf(" * Console: Falcon System\n");
-        printf(" * Mod: RGH-1.3 - CHKSTOP\n");
-        printf(" * Glitcher: Matrix Glitcher\n");
-        printf(" * Mod Date: (REFLASHED) 8/28/2026 - 10:31PM\n");
-        printf(" * Actual Motherboard Date: 04/21/2008\n");
-        printf(" * Modders: squidwidthe1st & shrimp_fryrice on discord\n");
-        printf(" * EXTRA MODS: XLume - JQ6500 - PICOFLASHER - WSWITCHPICO\n");
+        printf(" * Mod: RGH-1.3 - CHKSTOP - 2 Wire\n");
+        printf(" * Glitcher: Matrix Glitcher V3 - Disabled Oscillator\n");
+        printf(" * Mod Date: 9/6/2026 - 5:34PM\n");
+        printf(" * Actual Motherboard Date: 09/05/2008 - MDY\n");
+        printf(" * Modders: squidwidthe1st on discord\n");
 
     } else if (xenon_get_console_type() == 3) {
 
